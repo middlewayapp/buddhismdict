@@ -43,7 +43,7 @@ const nextConfig = {
 
   // This webpack fn is exec'd 2x (server + client); can use "isServer" property if nec.
   // webpack: (config, { buildId, dev, isServer, defaultLoaders, webpack }) => {
-  webpack: (config, { webpack }) => {
+  webpack: (config) => {
     // Note: we provide webpack above so you should not `require` it
     // Perform customizations to webpack config
     // config.plugins.push(new webpack.IgnorePlugin(/\/__tests__\//));
