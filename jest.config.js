@@ -14,6 +14,7 @@ module.exports = {
   moduleNameMapper: {
     '\\.(css|less|sass|scss)$': 'identity-obj-proxy',
     '^@/public(.*)$': ['<rootDir>/public$1'],
+    '^@/db(.*)$': ['<rootDir>/db$1'],
   },
   reporters: ['default', 'jest-junit'],
   testResultsProcessor: 'jest-junit',
