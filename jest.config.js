@@ -2,7 +2,7 @@ module.exports = {
   roots: ['<rootDir>'],
   moduleFileExtensions: ['ts', 'tsx', 'js', 'json', 'jsx'],
   setupFilesAfterEnv: ['@testing-library/jest-dom'],
-  testEnvironment: 'jsdom',
+  testEnvironment: 'node',
   testPathIgnorePatterns: [
     '<rootDir>[/\\\\](node_modules|.next|dist|storybook-static|scratch|e2e)[/\\\\]',
   ],

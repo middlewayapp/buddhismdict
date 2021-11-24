@@ -53,6 +53,7 @@
     "fast-xml-parser": "^4.0.0-beta.2",
     "husky": "^7.0.4",
     "jest": "^27.0.1",
+    "jest-environment-node": "^27.3.1",
     "jest-junit": "^13.0.0",
     "jest-watch-typeahead": "^1.0.0",
     "lint-staged": "^12.1.2",

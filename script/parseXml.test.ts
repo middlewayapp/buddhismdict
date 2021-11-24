@@ -18,7 +18,17 @@ test('parse xml', async () => {
 
   for (const obj of jObj['TEI.2'].text.body.div) {
     const { entry: entries } = obj;
-    for (const entry of entries) {
+    if (Array.isArray(entries)) {
+      for (const entry of entries) {
+        const { form: word, sense: definition } = entry;
+        await dict.insertOne({
+          _id: new ObjectId(),
+          word,
+          definition,
+        });
+      }
+    } else {
+      const entry = entries;
       const { form: word, sense: definition } = entry;
       await dict.insertOne({
         _id: new ObjectId(),
