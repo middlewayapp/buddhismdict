@@ -78,6 +78,7 @@ module.exports = {
           { alias: '@/db', matcher: '^db' },
           { alias: '@/types', matcher: '^types' },
           { alias: '@/screens', matcher: '^screens' },
+          { alias: '@/services', matcher: '^services' },
         ],
       },
     ],

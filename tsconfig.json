@@ -32,6 +32,9 @@
       ],
       "@/screens/*": [
         "screens/*"
+      ],
+      "@/services/*": [
+        "services/*"
       ]
     },
     "preserveConstEnums": true,
