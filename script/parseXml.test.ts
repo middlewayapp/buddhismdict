@@ -1,13 +1,14 @@
 // use jest as script runner
 import { getDictCollection } from '@/db/collection/dict';
+import { DICT } from '@/types/dict';
 import { ObjectId } from 'bson';
 import { XMLParser } from 'fast-xml-parser';
 import fs from 'fs';
 import path from 'path';
 
-test.skip('parse xml for A Chinese Translation of A.P. Buddhadatta\'s "Concise Pali-English Dictionary"', async () => {
+test('parse xml for A Chinese Translation of A.P. Buddhadatta\'s "Concise Pali-English Dictionary"', async () => {
   const dict = await getDictCollection();
-  const dictName = `A Chinese Translation of A.P. Buddhadatta's "Concise Pali-English Dictionary"`;
+  const dictCode = DICT.DamaChineseTranslationConcisePaliEnglish.code;
 
   const file = fs.readFileSync(
     path.resolve(__dirname, 'assets', 'pali-chin.dila.tei.p4.xml'),
@@ -27,7 +28,7 @@ test.skip('parse xml for A Chinese Translation of A.P. Buddhadatta\'s "Concise P
           _id: new ObjectId(),
           word,
           definition,
-          dictName,
+          dictCode,
         });
       }
     } else {
@@ -37,7 +38,7 @@ test.skip('parse xml for A Chinese Translation of A.P. Buddhadatta\'s "Concise P
         _id: new ObjectId(),
         word,
         definition,
-        dictName,
+        dictCode,
       });
     }
   }

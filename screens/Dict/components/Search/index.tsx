@@ -3,7 +3,7 @@ import TextField from '@mui/material/TextField';
 import Autocomplete from '@mui/material/Autocomplete';
 import CircularProgress from '@mui/material/CircularProgress';
 import { useWordSearch } from '@/screens/Dict/data';
-import { SearchTipDialog } from '@/screens/Dict/components/components/SearchTipDialog';
+import { SearchTipDialog } from '@/screens/Dict/components/Search/SearchTipDialog';
 
 type Props = {
   onSelect: (val: string) => void;
