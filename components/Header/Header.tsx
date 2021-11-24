@@ -13,7 +13,7 @@ import { useRouter } from 'next/dist/client/router';
 
 const DRAWER_ITEMS = [
   { text: 'Dict', pathname: '/' },
-  { text: 'Copywright', pathname: '/copywright' },
+  { text: 'Copyright', pathname: '/copyright' },
 ];
 
 export function Header() {

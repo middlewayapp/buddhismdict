@@ -1,7 +1,1 @@
-import type { NextPage } from 'next';
-
-const Home: NextPage = () => {
-  return <div>home</div>;
-};
-
-export default Home;
+export { Dict as default } from '@/screens/Dict';
