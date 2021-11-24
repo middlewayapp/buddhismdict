@@ -3,6 +3,7 @@ import TextField from '@mui/material/TextField';
 import Autocomplete from '@mui/material/Autocomplete';
 import CircularProgress from '@mui/material/CircularProgress';
 import { useWordSearch } from '@/screens/Dict/data';
+import { SearchTipDialog } from '@/screens/Dict/components/components/SearchTipDialog';
 
 type Props = {
   onSelect: (val: string) => void;
@@ -43,6 +44,7 @@ export function Search({ onSelect }: Props) {
             onChange: (e) => {
               setQuery(e.target.value);
             },
+            startAdornment: <SearchTipDialog />,
             endAdornment: (
               <React.Fragment>
                 {isLoadingWords ? <CircularProgress color='inherit' size={20} /> : null}

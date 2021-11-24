@@ -12,7 +12,7 @@ import ListItemText from '@mui/material/ListItemText';
 import { useRouter } from 'next/dist/client/router';
 
 const DRAWER_ITEMS = [
-  { text: 'Dict', pathname: '/' },
+  { text: 'Dictionary', pathname: '/' },
   { text: 'About', pathname: '/about' },
 ];
 
@@ -37,7 +37,7 @@ export function Header() {
               <MenuIcon />
             </IconButton>
             <Typography variant='h6' component='div' sx={{ flexGrow: 1 }}>
-              Buddhism Dict
+              Buddhism Dictionary
             </Typography>
           </Toolbar>
         </AppBar>
