@@ -1,9 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuites name="jest tests" tests="2" failures="0" errors="0" time="1.709">
-  <testsuite name="generateProximateRegex" errors="0" failures="0" skipped="0" timestamp="2021-11-24T14:17:16" time="1.601" tests="2">
-    <testcase classname="generateProximateRegex " name="generateProximateRegex " time="0.001">
+<testsuites name="jest tests" tests="3" failures="0" errors="0" time="9.747">
+  <testsuite name="generateProximateRegex" errors="0" failures="0" skipped="0" timestamp="2021-11-24T16:18:06" time="7.631" tests="2">
+    <testcase classname="generateProximateRegex normal charater match" name="generateProximateRegex normal charater match" time="0.002">
     </testcase>
-    <testcase classname="generateProximateRegex " name="generateProximateRegex " time="0">
+    <testcase classname="generateProximateRegex match approximate" name="generateProximateRegex match approximate" time="0">
+    </testcase>
+  </testsuite>
+  <testsuite name="undefined" errors="0" failures="0" skipped="1" timestamp="2021-11-24T16:18:06" time="7.765" tests="1">
+    <testcase classname=" parse xml for A Chinese Translation of A.P. Buddhadatta&apos;s &quot;Concise Pali-English Dictionary&quot;" name=" parse xml for A Chinese Translation of A.P. Buddhadatta&apos;s &quot;Concise Pali-English Dictionary&quot;" time="0">
+      <skipped/>
     </testcase>
   </testsuite>
 </testsuites>

@@ -5,7 +5,7 @@ import { XMLParser } from 'fast-xml-parser';
 import fs from 'fs';
 import path from 'path';
 
-test('parse xml for A Chinese Translation of A.P. Buddhadatta\'s "Concise Pali-English Dictionary"', async () => {
+test.skip('parse xml for A Chinese Translation of A.P. Buddhadatta\'s "Concise Pali-English Dictionary"', async () => {
   const dict = await getDictCollection();
   const dictName = `A Chinese Translation of A.P. Buddhadatta's "Concise Pali-English Dictionary"`;
 

@@ -3,12 +3,10 @@ module.exports = {
   moduleFileExtensions: ['ts', 'tsx', 'js', 'json', 'jsx'],
   setupFilesAfterEnv: ['@testing-library/jest-dom'],
   testEnvironment: 'node',
-  testPathIgnorePatterns: [
-    '<rootDir>[/\\\\](node_modules|.next|dist|storybook-static|scratch|e2e)[/\\\\]',
-  ],
+  testPathIgnorePatterns: ['<rootDir>/node_modules/', '<rootDir>/.next/'],
   transformIgnorePatterns: ['[/\\\\]node_modules[/\\\\].+\\.(ts|tsx)$'],
   transform: {
-    '^.+\\.(ts|tsx|js)$': 'babel-jest',
+    '^.+\\.(js|jsx|ts|tsx)$': ['babel-jest', { presets: ['next/babel'] }],
   },
   watchPlugins: ['jest-watch-typeahead/filename', 'jest-watch-typeahead/testname'],
   moduleNameMapper: {
