@@ -8,22 +8,11 @@ interface Props {
 function ErrorPage({ err }: Props) {
   return (
     <Alert severity='error'>
-      <AlertTitle>Error</AlertTitle>
-      {err.toString()}
+      <AlertTitle>Another error has occured</AlertTitle>
+      {err && err.toString()}
     </Alert>
   );
 }
-
-// for developing error page locally
-// function ErrorPage() {
-//   const err = new Error('test');
-//   return (
-//     <Alert severity='error'>
-//       <AlertTitle>Error</AlertTitle>
-//       {err.toString()}
-//     </Alert>
-//   );
-// }
 
 ErrorPage.getInitialProps = ({ err }: Props) => {
   return { err };

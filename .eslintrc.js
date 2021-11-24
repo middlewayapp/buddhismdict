@@ -47,6 +47,7 @@ module.exports = {
     'plugin:react/recommended',
     'plugin:testing-library/react', // plugin for testing-libraryrecommended best practices for unit testing
     'plugin:jest-dom/recommended', // plugin for jest-dom recommended best practices for unit testing
+    'plugin:@next/next/recommended',
     // eslint-config-prettier (as of v8.0.0) includes prettier/@typescript-eslint making it moot here:
     // 'prettier/@typescript-eslint', // disable any conflicting rules from @typescript-eslint/eslint-plugin
     // always put prettier last:
