@@ -10,8 +10,8 @@ export const useWordSearch = (query: string) => {
     ...rest
   } = useQuery(
     ['words', query],
-    async () => {
-      const entries = await getRequest<[UiEntry]>('/api/search?query=' + query);
+    async ({ signal }) => {
+      const entries = await getRequest<[UiEntry]>('/api/search?query=' + query, { signal });
       const words = entries.map((entry) => entry.word);
       return uniq(words);
     },
@@ -35,8 +35,8 @@ export const useEntries = (word: string) => {
     ...rest
   } = useQuery(
     ['entries', word],
-    async () => {
-      const entries = await getRequest<[UiEntry]>(`/api/entries/${word}`);
+    async ({ signal }) => {
+      const entries = await getRequest<[UiEntry]>(`/api/entries/${word}`, { signal });
       return entries;
     },
     {

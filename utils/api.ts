@@ -9,8 +9,12 @@ const validateRes = async (res: Response) => {
   throw new Error(message + error);
 };
 
-export async function getRequest<T>(pathname: string): Promise<T> {
-  const res = await fetch(pathname);
+type Option = {
+  signal?: AbortSignal;
+};
+
+export async function getRequest<T>(pathname: string, { signal }: Option = {}): Promise<T> {
+  const res = await fetch(pathname, { signal });
   await validateRes(res);
   if (res.status === 204) {
     return null;
