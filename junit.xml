@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuites name="jest tests" tests="1" failures="0" errors="0" time="4.437">
-  <testsuite name="undefined" errors="0" failures="0" skipped="0" timestamp="2021-11-24T02:29:37" time="4.324" tests="1">
-    <testcase classname=" parse xml for A Chinese Translation of A.P. Buddhadatta&apos;s &quot;Concise Pali-English Dictionary&quot;" name=" parse xml for A Chinese Translation of A.P. Buddhadatta&apos;s &quot;Concise Pali-English Dictionary&quot;" time="2.718">
+<testsuites name="jest tests" tests="2" failures="0" errors="0" time="1.709">
+  <testsuite name="generateProximateRegex" errors="0" failures="0" skipped="0" timestamp="2021-11-24T14:17:16" time="1.601" tests="2">
+    <testcase classname="generateProximateRegex " name="generateProximateRegex " time="0.001">
+    </testcase>
+    <testcase classname="generateProximateRegex " name="generateProximateRegex " time="0">
     </testcase>
   </testsuite>
 </testsuites>

@@ -31,7 +31,9 @@ export function Search({ onSelect }: Props) {
         // when user choose a selection in the dropdown
         onSelect(value);
       }}
+      autoHighlight
       loading={isLoadingWords}
+      noOptionsText={'Please enter a word'}
       renderInput={(params) => (
         <TextField
           {...params}
