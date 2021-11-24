@@ -1,7 +1,14 @@
 import { ObjectId } from 'mongodb';
 
-export type Entry = {
-  _id: ObjectId;
+type EntryBase = {
   word: string;
   definition: string;
 };
+
+export type BackendEntry = {
+  _id: ObjectId;
+} & EntryBase;
+
+export type UiEntry = {
+  _id: string;
+} & EntryBase;

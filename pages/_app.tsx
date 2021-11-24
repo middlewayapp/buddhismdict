@@ -39,7 +39,7 @@ function App({ Component, pageProps }: AppProps) {
       {/* gives our styles greater specificity https://material-ui.com/styles/advanced/#injectfirst */}
       <CacheProvider value={cache}>
         <Head>
-          <title>Ryan Fire Detection</title>
+          <title>Buddhism Dict</title>
           <meta name='viewport' content='initial-scale=1, width=device-width' />
         </Head>
         {/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}
