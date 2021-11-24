@@ -35,7 +35,7 @@ export function Search({ onSelect }: Props) {
       renderInput={(params) => (
         <TextField
           {...params}
-          label='Asynchronous'
+          label='Enter word to search'
           InputProps={{
             ...params.InputProps,
             onChange: (e) => {

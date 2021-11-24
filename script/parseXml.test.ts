@@ -5,8 +5,9 @@ import { XMLParser } from 'fast-xml-parser';
 import fs from 'fs';
 import path from 'path';
 
-test('parse xml', async () => {
+test('parse xml for A Chinese Translation of A.P. Buddhadatta\'s "Concise Pali-English Dictionary"', async () => {
   const dict = await getDictCollection();
+  const dictName = `A Chinese Translation of A.P. Buddhadatta's "Concise Pali-English Dictionary"`;
 
   const file = fs.readFileSync(
     path.resolve(__dirname, 'assets', 'pali-chin.dila.tei.p4.xml'),
@@ -16,6 +17,7 @@ test('parse xml', async () => {
   const parser = new XMLParser();
   const jObj = parser.parse(file);
 
+  await dict.deleteMany({});
   for (const obj of jObj['TEI.2'].text.body.div) {
     const { entry: entries } = obj;
     if (Array.isArray(entries)) {
@@ -25,6 +27,7 @@ test('parse xml', async () => {
           _id: new ObjectId(),
           word,
           definition,
+          dictName,
         });
       }
     } else {
@@ -34,7 +37,9 @@ test('parse xml', async () => {
         _id: new ObjectId(),
         word,
         definition,
+        dictName,
       });
     }
   }
+  console.log('done1');
 });

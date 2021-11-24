@@ -15,7 +15,7 @@ export function EntryCard({ entry }: Props) {
         <Typography variant='h5' component='div'>
           {entry.definition}
         </Typography>
-        <Typography variant='body2'>dict name</Typography>
+        <Typography variant='body2'>{entry.dictName}</Typography>
       </CardContent>
     </Card>
   );
